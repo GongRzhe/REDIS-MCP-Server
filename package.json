@@ -1,7 +1,7 @@
 {
   "name": "redis",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "build/index.js",
   "type": "module",
   "bin": {
     "redis": "./build/index.js"
@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "postinstall": "node -e \"require('fs').chmodSync('build/index.js', '755')\""
+    "postinstall": "chmod +x build/index.js"
   },
   "files": [
     "build"

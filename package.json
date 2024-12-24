@@ -1,1 +1,36 @@
-ewogICJuYW1lIjogInJlZGlzIiwKICAidmVyc2lvbiI6ICIxLjAuMCIsCiAgIm1haW4iOiAiaW5kZXguanMiLAogICJ0eXBlIjogIm1vZHVsZSIsCiAgImJpbiI6IHsKICAgICJyZWRpcyI6ICIuL2J1aWxkL2luZGV4LmpzIgogIH0sCiAgInNjcmlwdHMiOiB7CiAgICAiYnVpbGQiOiAidHNjIiwKICAgICJwcmVwYXJlIjogIm5wbSBydW4gYnVpbGQiLAogICAgInBvc3RpbnN0YWxsIjogIm5vZGUgLWUgXCJyZXF1aXJlKCdmcycpLmNobW9kU3luYygnYnVpbGQvaW5kZXguanMnLCAnNzU1JylcIiIKICB9LAogICJmaWxlcyI6IFsKICAgICJidWlsZCIKICBdLAogICJrZXl3b3JkcyI6IFtdLAogICJhdXRob3IiOiAiIiwKICAibGljZW5zZSI6ICJJU0MiLAogICJkZXNjcmlwdGlvbiI6ICIiLAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiQHR5cGVzL25vZGUiOiAiXjIyLjEwLjIiLAogICAgInR5cGVzY3JpcHQiOiAiXjUuNy4yIgogIH0sCiAgImRlcGVuZGVuY2llcyI6IHsKICAgICJAbW9kZWxjb250ZXh0cHJvdG9jb2wvc2RrIjogIl4wLjQuMCIsCiAgICAiQHR5cGVzL3JlZGlzIjogIl40LjAuMTAiLAogICAgInJlZGlzIjogIl40LjcuMCIKICB9LAogICJlbmdpbmVzIjogewogICAgIm5vZGUiOiAiPj0xNiIKICB9LAogICJwdWJsaXNoQ29uZmlnIjogewogICAgImFjY2VzcyI6ICJwdWJsaWMiCiAgfQp9
+{
+  "name": "redis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "redis": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "postinstall": "node -e \"require('fs').chmodSync('build/index.js', '755')\""
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "@types/redis": "^4.0.10",
+    "redis": "^4.7.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

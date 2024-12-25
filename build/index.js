@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { CallToolRequestSchema, ListToolsRequestSchema, } from "@modelcontextprotocol/sdk/types.js";
@@ -198,9 +199,18 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 });
 // Start the server
 async function main() {
+    if (!process.argv[2]) {
+        console.error('Error: Redis URL is required');
+        console.error('Usage: npx @gongrzhe/server-redis redis://host:port');
+        process.exit(1);
+    }
     try {
         // Connect to Redis
-        redisClient.on('error', (err) => console.error('Redis Client Error', err));
+        redisClient.on('error', (err) => {
+            console.error('Redis Client Error:', err.message);
+            process.exit(1);
+        });
+        console.error(`Attempting to connect to Redis at ${REDIS_URL}...`);
         await redisClient.connect();
         console.error(`Connected to Redis successfully at ${REDIS_URL}`);
         const transport = new StdioServerTransport();
@@ -208,12 +218,16 @@ async function main() {
         console.error("Redis MCP Server running on stdio");
     }
     catch (error) {
-        console.error("Error during startup:", error);
+        console.error("Error during startup:", error instanceof Error ? error.message : String(error));
         await redisClient.quit();
         process.exit(1);
     }
 }
+process.on('unhandledRejection', (error) => {
+    console.error('Unhandled rejection:', error instanceof Error ? error.message : String(error));
+    redisClient.quit().finally(() => process.exit(1));
+});
 main().catch((error) => {
-    console.error("Fatal error in main():", error);
+    console.error("Fatal error in main():", error instanceof Error ? error.message : String(error));
     redisClient.quit().finally(() => process.exit(1));
 });

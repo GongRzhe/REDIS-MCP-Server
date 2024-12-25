@@ -1,21 +1,28 @@
 {
-  "name": "redis",
+  "name": "@gongrzhe/server-redis-mcp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "build/index.js",
   "type": "module",
   "bin": {
     "redis": "./build/index.js"
   },
   "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\""
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "build"
   ],
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "redis",
+    "cache",
+    "database",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "author": "gongrzhe",
   "license": "ISC",
-  "description": "",
+  "description": "A Redis Model Context Protocol (MCP) server implementation for interacting with Redis databases",
   "devDependencies": {
     "@types/node": "^22.10.2",
     "typescript": "^5.7.2"

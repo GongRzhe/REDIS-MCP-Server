@@ -1,9 +1,19 @@
 # Redis MCP Server (@gongrzhe/server-redis-mcp@1.0.0)
+[![smithery badge](https://smithery.ai/badge/@gongrzhe/server-redis-mcp)](https://smithery.ai/server/@gongrzhe/server-redis-mcp)
 
 A Redis Model Context Protocol (MCP) server implementation for interacting with Redis databases. This server enables LLMs to interact with Redis key-value stores through a set of standardized tools.
 
 ## Installation & Usage
 
+### Installing via Smithery
+
+To install Redis MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@gongrzhe/server-redis-mcp):
+
+```bash
+npx -y @smithery/cli install @gongrzhe/server-redis-mcp --client claude
+```
+
+### Installing Manually
 ```bash
 # Using npx with specific version (recommended)
 npx @gongrzhe/server-redis-mcp@1.0.0 redis://your-redis-host:port

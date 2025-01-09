@@ -1,4 +1,6 @@
 # Redis MCP Server (@gongrzhe/server-redis-mcp@1.0.0)
+
+![](https://badge.mcpx.dev?type=server 'MCP Server')
 [![smithery badge](https://smithery.ai/badge/@gongrzhe/server-redis-mcp)](https://smithery.ai/server/@gongrzhe/server-redis-mcp)
 
 A Redis Model Context Protocol (MCP) server implementation for interacting with Redis databases. This server enables LLMs to interact with Redis key-value stores through a set of standardized tools.

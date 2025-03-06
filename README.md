@@ -1,4 +1,4 @@
-# Redis MCP Server (@gongrzhe/server-redis-plus-mcp@1.0.0)
+# Redis MCP Server (@gongrzhe/server-redis-plus-mcp)
 
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
 [![smithery badge](https://smithery.ai/badge/@gongrzhe/server-redis-plus-mcp)](https://smithery.ai/server/@gongrzhe/server-redis-plus-mcp)
@@ -18,17 +18,17 @@ npx -y @smithery/cli install @gongrzhe/server-redis-plus-mcp --client claude
 ### Installing Manually
 ```bash
 # Using npx with specific version (recommended)
-npx @gongrzhe/server-redis-plus-mcp@1.0.0 redis://your-redis-host:port
+npx @gongrzhe/server-redis-plus-mcp redis://your-redis-host:port
 
 # Example:
-npx @gongrzhe/server-redis-plus-mcp@1.0.0 redis://localhost:6379
+npx @gongrzhe/server-redis-plus-mcp redis://localhost:6379
 ```
 
 Or install globally:
 
 ```bash
 # Install specific version globally
-npm install -g @gongrzhe/server-redis-plus-mcp@1.0.0
+npm install -g @gongrzhe/server-redis-plus-mcp
 
 # Run after global installation
 @gongrzhe/server-redis-plus-mcp redis://your-redis-host:port
@@ -69,7 +69,7 @@ To use this server with the Claude Desktop app, add the following configuration 
     "redis": {
       "command": "npx",
       "args": [
-        "@gongrzhe/server-redis-plus-mcp@1.0.0",
+        "@gongrzhe/server-redis-plus-mcp",
         "redis://localhost:6379"
       ]
     }

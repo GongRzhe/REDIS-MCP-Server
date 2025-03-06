@@ -1,7 +1,7 @@
-# Redis MCP Server (@gongrzhe/server-redis-mcp@1.0.0)
+# Redis MCP Server (@gongrzhe/server-redis-plus-mcp@1.0.0)
 
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
-[![smithery badge](https://smithery.ai/badge/@gongrzhe/server-redis-mcp)](https://smithery.ai/server/@gongrzhe/server-redis-mcp)
+[![smithery badge](https://smithery.ai/badge/@gongrzhe/server-redis-plus-mcp)](https://smithery.ai/server/@gongrzhe/server-redis-plus-mcp)
 
 A Redis Model Context Protocol (MCP) server implementation for interacting with Redis databases. This server enables LLMs to interact with Redis key-value stores through a set of standardized tools.
 
@@ -9,29 +9,29 @@ A Redis Model Context Protocol (MCP) server implementation for interacting with 
 
 ### Installing via Smithery
 
-To install Redis MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@gongrzhe/server-redis-mcp):
+To install Redis MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@gongrzhe/server-redis-plus-mcp):
 
 ```bash
-npx -y @smithery/cli install @gongrzhe/server-redis-mcp --client claude
+npx -y @smithery/cli install @gongrzhe/server-redis-plus-mcp --client claude
 ```
 
 ### Installing Manually
 ```bash
 # Using npx with specific version (recommended)
-npx @gongrzhe/server-redis-mcp@1.0.0 redis://your-redis-host:port
+npx @gongrzhe/server-redis-plus-mcp@1.0.0 redis://your-redis-host:port
 
 # Example:
-npx @gongrzhe/server-redis-mcp@1.0.0 redis://localhost:6379
+npx @gongrzhe/server-redis-plus-mcp@1.0.0 redis://localhost:6379
 ```
 
 Or install globally:
 
 ```bash
 # Install specific version globally
-npm install -g @gongrzhe/server-redis-mcp@1.0.0
+npm install -g @gongrzhe/server-redis-plus-mcp@1.0.0
 
 # Run after global installation
-@gongrzhe/server-redis-mcp redis://your-redis-host:port
+@gongrzhe/server-redis-plus-mcp redis://your-redis-host:port
 ```
 
 ## Components
@@ -69,7 +69,7 @@ To use this server with the Claude Desktop app, add the following configuration 
     "redis": {
       "command": "npx",
       "args": [
-        "@gongrzhe/server-redis-mcp@1.0.0",
+        "@gongrzhe/server-redis-plus-mcp@1.0.0",
         "redis://localhost:6379"
       ]
     }

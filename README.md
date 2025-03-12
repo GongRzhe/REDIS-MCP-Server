@@ -5,6 +5,9 @@
 
 A Redis Model Context Protocol (MCP) server implementation for interacting with Redis databases. This server enables LLMs to interact with Redis key-value stores through a set of standardized tools.
 
+## Update
+62 Redis MCP tools in https://github.com/GongRzhe/REDIS-MCP-Server/tree/redis-plus
+
 ## Installation & Usage
 
 ### Installing via Smithery

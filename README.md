@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/gongrzhe-redis-mcp-server-badge.png)](https://mseep.ai/app/gongrzhe-redis-mcp-server)
+
 # Redis MCP Server (@gongrzhe/server-redis-mcp@1.0.0)
 
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
